@@ -1,4 +1,4 @@
-# -Math-mental
+# mental-math
 A mental math app
 
 ## Description
