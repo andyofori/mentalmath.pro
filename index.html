@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Mental</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px dotted black;
+            padding: 10px 10px;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <section id="outputSection">
+        <div id="timerDiv">
+            <p id="timerDisplay">Timer: -</p>
+        </div>
+        <div id="difficultyDiv">
+            <p id="difficultyPrint">Difficulty: EASY. 5s</p>
+        </div>
+        <div id="equationDiv">
+            <p id="equationPrint">Ready</p>
+        </div>
+        <div id="answerDiv">
+            <p id="answerPrint">= -</p>
+        </div>
+    </section>
+    
+    <section id="inputSection">
+        <div id="formInputDiv">
+        <form>
+            <input type="text" id="userInput" placeholder="Answer">
+            <input type="button" id="enterButton" value="Enter">
+        </form>
+        </div>
+    <br>
+        <div id="difficultyButtons">
+        <form>
+            <input type="button" id="easyButton" value="easy">
+            <input type="button" id="normalButton" value="normal">
+            <input type="button" id="hardButton" value="hard">
+        </form>
+        </div>
+    <br>
+        <div>
+        <form>
+            <input type="button" id="startStopButton" value="start">
+        </form>
+        </div>
+    </section>
+<script src="mathemental.js"></script>
+</body>
+</html>
