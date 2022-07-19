@@ -168,20 +168,3 @@ input[name=levels]:checked + label {
 .pointer {
     cursor: pointer;
 }
-
-
-
-
-
-/* ---------------------------------- OBSOLETE  */
-/* ---------------------------------- CODE      */
-/* ---------------------------------- BELOW     */
-/* .form input[type=button] {
-    width: 100%;
-    margin: 0;
-    background-color: var(--color-tertiary);
-    padding: 1.5em;
-    border: none;
-    color: white;
-    font-size: .86rem;
-} */
