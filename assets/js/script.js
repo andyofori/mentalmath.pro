@@ -32,7 +32,6 @@ var view = {
     /**
         * This method prints two possible answers,
         * one wrong and one correct
-        * ...isCorrect returns false at timeout
         */
     answerPrinters: function() {
         const showAnswerA = document.querySelector(".answer__a");
@@ -46,25 +45,27 @@ var view = {
                         <input type="radio" name="answer" value="${numa}" id="${numa}">
                         <label class="" for="${numa}">${numa}</label>
                     </div>`).join(' ');
+                    console.log("* Offset is " + model.offSet());
+                    console.log("* Ans A  is Correct");
                     showAnswerB.innerHTML = answerArray.map((numb) => 
                     `<div>
-                        <input type="radio" name="answer" value="${numb+1}" id="${numb}">
-                        <label class="" for="${numb}">${numb+1}</label>
+                        <input type="radio" name="answer" value="${model.offSet()}" id="${numb}">
+                        <label class="" for="${numb}">${model.offSet()}</label>
                     </div>`).join(' ');
-                    console.log(1);
                     break;
 
             case 2: showAnswerA.innerHTML = answerArray.map((numa) => 
                     `<div>
-                        <input type="radio" name="answer" value="${numa+1}" id="${numa}">
-                        <label class="" for="${numa}">${numa+1}</label>
+                        <input type="radio" name="answer" value="${model.offSet()}" id="${numa}">
+                        <label class="" for="${numa}">${model.offSet()}</label>
                     </div>`).join(' ');
                     showAnswerB.innerHTML = answerArray.map((numb) => 
                     `<div>
                         <input type="radio" name="answer" value="${numb}" id="${numb}">
                         <label class="" for="${numb}">${numb}</label>
                     </div>`).join(' ');
-                    console.log(2);
+                    console.log("* Offset is " + model.offSet());
+                    console.log("* Ans B  is Correct");
                     break;
         }
 
@@ -110,6 +111,17 @@ var model = {
     answer: null,               // initial value for the equation sum
     //this.choice (or model.choice) will be set on-the-fly
     errorCount: 0,
+
+    /**
+        * This method returns true if the player has not exhausted their
+        * chances/lives or if it is a fresh game (fresh start).
+        * @return true if player has not used up all 3 chances or just started
+    */
+    playerHasLives: function() {
+        if (this.errorCount < 3) {
+            return true;
+        }
+    },
     
     /**
         * This method sets the userAnswer property of 
@@ -134,6 +146,26 @@ var model = {
     },
 
     /**
+     * This method offsets one of the answer options.
+     * It provides special 
+     * @returns the offset figure
+     */
+    offSet: function() {
+        if (this.operand1 < 10 || this.operand2 < 10) {
+            return this.equationAddition() + 1; // If one operand is a single digit. Meant for "normal".
+        } else if (this.operand1 < 100 || this.operand2 < 100) {
+            return this.equationAddition() + 10; // If one operand is in tens. Meant for "hard".
+        } else { // If both operands are of equal expected lenghts
+            switch (this.difficultyLevel) {
+                case "easy": return this.equationAddition() + 1;
+                case "normal": return this.equationAddition() + 10;
+                case "hard": return this.equationAddition() + 100;
+                break;
+            }
+        }
+    },
+
+    /**
         * This method generates a random number
         * based on current difficulty level
         * @return A random number 
@@ -148,8 +180,7 @@ var model = {
     },
 
     /** 
-        * This method compares user's answer with correct 
-        * anser
+        * This method compares user's answer with correct answer
         * @return true if they match
         * @return false if they don't match
         */
@@ -158,6 +189,28 @@ var model = {
             return true;
         } else {
             return false;
+        }
+    },
+
+    /**
+        * This method reads difficulty level from local storage if it exists.
+        * @returns a state of "easy", "normal" or "hard" selections for the difficulty
+        * radio buttons.
+     */
+    localStorageForDifficulty: function() {
+        console.log(localStorage.getItem("difficultyOnDisk") + " difficulty");
+        if (localStorage.getItem("difficultyOnDisk") !== null) { //If key exists
+            switch (localStorage.getItem("difficultyOnDisk")) {
+                case "easy":    return document.getElementById("radio-easy").checked = true;
+                                break;
+                case "normal":  return document.getElementById("radio-normal").checked = true;
+                                break;
+                case "hard":    return document.getElementById("radio-hard").checked = true;
+                                break;
+                }
+        } else { //If key doesn't exist, assign "easy" as the default
+            document.getElementById("radio-easy").checked = true;
+            console.log("easy auto assigned");
         }
     }
 }
@@ -174,15 +227,28 @@ var controller = {
     /**
         * This method prints the two answer choices
         */
-    printAnswers: function() {
+    printAnswerChoices: function() {
         view.answerPrinters();
     },
 
     /**
         * Difficulty Switch.
-        * ...sets difficulty level and corresponding duration
+        * ...handles difficulty level selection via radio buttons
+        * ...calls the necessary method to store difficulty level 
+        * and to set the corresponding duration
         */
     difficultySwitch: function(selectedDifficulty) {
+        const difficultyRadioButtons = document.querySelectorAll('input[name="levels"]');
+
+        //Assign difficulty according to the checked radio button
+        for (const difficultyRadioButton of difficultyRadioButtons) {
+            if (difficultyRadioButton.checked) {
+                selectedDifficulty = difficultyRadioButton.value;
+                break;
+            }
+        }
+
+        //Set difficulty level
         switch (selectedDifficulty) {
             case "easy":    this.setTimerAndOperands(selectedDifficulty, 5);
                             break;
@@ -194,7 +260,8 @@ var controller = {
     },
     
     /**
-    * This method sets the timer and the next operand numbers
+    * This method sets the timer and the next operand numbers.
+    * It also sets the difficulty level and then stores it on local disk
     * @param selectedDifficulty Holds user's radio selection. It is needed by model.randomNew for operands to be generated in the appropriate ranges that match the difficulty level that the user has selected.
     * @param time Holds the number of seconds for countdownTimer
     */
@@ -203,7 +270,21 @@ var controller = {
         model.operand1 = model.randomNew();
         model.operand2 = model.randomNew();
         countdownTimer = time;
-    }
+        //Write difficulty level to local storage
+        localStorage.setItem("difficultyOnDisk", selectedDifficulty);
+    },
+
+    /**
+        * This method increases and decreases user error count
+        * whiles keeping it above zero.
+        */
+     progressControl: function() {
+        if (!model.isCorrect()) {
+            model.errorCount++;  //  If wrong answer, add one. Max count is 2
+        } else if (model.isCorrect() && model.errorCount > 0) {
+            model.errorCount--;  //  If right answer, minus one. Min is 0.
+        }
+    },
 }
 
 
@@ -219,49 +300,51 @@ var controller = {
 
     
 //////////////
+//Progress__Bar
+view.progressBar(); //Initial Bar. This fills the bar before the game runs.
+
+//Read difficulty level from local storage if it exists
+//or assign a first-time default of "easy" 
+model.localStorageForDifficulty();
+
+
 //  Play/Stop + Radio (difficulty) buttons
 const btn = document.querySelector(".play-stop");        
-const difficultyRadioButtons = document.querySelectorAll('input[name="levels"]');
 // Radio buttons
 btn.addEventListener("click", () => {
-    if (model.errorCount <= 2) {
-        if (model.errorCount == 0) {
-            view.canvasColorReset();
+    if (model.playerHasLives()) {    //  If player still hasn't finished
+        if (model.errorCount == 0) {    //  If it's a fresh game...
+            view.canvasColorReset();    //  ...reset the canvas color
         }
-
-        if (btn.value == "play") { //  If Play/Stop Button value is "Play"
+        
+        if (btn.value == "play") { //   If Play/Stop Button value is "Play"
+            
+            //Handle difficulty level selection via radio buttons
             let selectedDifficulty;
-            for (const difficultyRadioButton of difficultyRadioButtons) {
-                if (difficultyRadioButton.checked) {
-                    selectedDifficulty = difficultyRadioButton.value;
-                    break;
-                }
-            }
-            //Set difficulty level
             controller.difficultySwitch(selectedDifficulty);
+
             //Display operands
             controller.printOperands();
-            //Display answer choices
-            controller.printAnswers();
-    
-            //progress__bar
-            view.progressBar();
+            //Display possible answer choices
+            controller.printAnswerChoices();
+            
+            //Progress__Bar
+            view.progressBar(); //In-game Bar. This fills the bar in-game.
             
             // Get user choice and cross-check with correct equation answer
             const answerRadioButton = document.querySelectorAll('input[name="answer"]');
             for (const radioButton of answerRadioButton) {
                 radioButton.addEventListener("change", function(e){
-                    // set model property for choice of answer
-                    // model.setChoice(this.value);
+                    // set the property for the user's answer choice
                     model.choice = this.value;
-    
-                    // invoke invigilator
+                    
+                    // invoke invigilator and ekepp running the game till game over
                     if (model.isCorrect()) {
-                        console.log("RIGHT");
+                        console.log("///// CORRECT ANS.");
                         btn.click();
                         btn.click();
                     } else {
-                        console.log("WRONG");
+                        console.log("/////   WRONG ANS.");
                         btn.click();
                         btn.click();
                     }
@@ -283,31 +366,29 @@ btn.addEventListener("click", () => {
                 }
                 return hello;
             }(), 1000);
-
+            
             //Cause Start/Stop Button to STOP on next pressing
             btn.value = "stop";
             
         } else { // Else if the Stop Button (now the countdown timer) is pressed
-
+            //Clear the timer for next (re)start
             clearInterval(controller.mainCounter);
-            controller.printAnswers();
+            // Change canvas color based on answer
+            view.canvasColorChange();
             //Cause start/stop button to RESTART on next pressing
             btn.value = "play";
-            btn.innerHTML = "play";
-            view.canvasColorChange();
-                         
-            if (!model.isCorrect()) {
-                model.errorCount++;
-            }
-            console.log("errors made: " + model.errorCount);
-
+            btn.innerHTML = "Ans: " + model.equationAddition();
+            
+            //Count errors
+            controller.progressControl();
+            //Progress__Bar
+            view.progressBar(); //Game over Bar. For the final removal of the bar.
+            console.log("Errors: " + model.errorCount);
         }
-
-    } else {
-
-        model.errorCount = 0;
+    } else { // GAME OVER
+        btn.innerHTML = "Play";
         console.log("STOPPED since errors made is: " + model.errorCount);
-
+        model.errorCount = 0;
     }
 });
 
@@ -318,44 +399,3 @@ btn.addEventListener("click", () => {
 //////////////
 //  Countdown timer - a Global variable
 var countdownTimer;
-
-
-
-
-//////////////////////////////////////////////////////////// OBSOLETE
-//////////////////////////////////////////////////////////// CODE
-//////////////////////////////////////////////////////////// BELOW
-//Handles Enter button click
-// var enterButton = document.querySelector("#enterButton");
-// enterButton.onclick = () => {
-//     var userInput = document.querySelector("#userInput");
-//     var input = userInput.value;
-//     //Pass user's answer to the model object
-//     model.setUserAnswer(userInput.value);
-
-//     //Clean up the input form
-//     userInput.value = "";
-
-//     //////////////
-//     //If the game is in motion, stop and start
-//     //again after user enters answer
-//     if (btn.value === "stop") {
-//         btn.click();
-//         btn.click();
-//     }  
-// }
-
-// //Handles Enter button press
-// var userInput = document.querySelector("#userInput");
-// userInput.onkeypress = (e) => {
-
-//     // in IE9 and earlier, the event object doesn't get passed
-//     // to the event handler correctly, so we use window.event instead.
-//     e = e || window.event;
-
-//     if (e.keyCode === 13) {
-//         //trick enterButton into thinking it was clicked
-//         enterButton.click();
-//         return false;
-//     }
-// }
