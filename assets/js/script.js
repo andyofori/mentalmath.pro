@@ -316,9 +316,7 @@ btn.addEventListener("click", () => {
         if (model.errorCount == 0) {    //  If it's a fresh game...
             view.canvasColorReset();    //  ...reset the canvas color
         }
-        
-        if (btn.value == "play") { //   If Play/Stop Button value is "Play"
-            
+        if (btn.value == "play") { //   If Play/Stop Button value is "Play"            
             //Handle difficulty level selection via radio buttons
             let selectedDifficulty;
             controller.difficultySwitch(selectedDifficulty);
@@ -349,8 +347,7 @@ btn.addEventListener("click", () => {
                         btn.click();
                     }
                 });
-            }
-    
+            }    
             //Countdown
             controller.mainCounter = setInterval(function hello() {
                 view.countdownDisplay();
@@ -365,11 +362,9 @@ btn.addEventListener("click", () => {
                     btn.click();
                 }
                 return hello;
-            }(), 1000);
-            
+            }(), 1000);           
             //Cause Start/Stop Button to STOP on next pressing
-            btn.value = "stop";
-            
+            btn.value = "stop";          
         } else { // Else if the Stop Button (now the countdown timer) is pressed
             //Clear the timer for next (re)start
             clearInterval(controller.mainCounter);
