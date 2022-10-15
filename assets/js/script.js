@@ -41,29 +41,37 @@ var view = {
         switch ((Math.floor(Math.random()*2)) + 1) {
             // insert radio buttons here
             case 1: showAnswerA.innerHTML = answerArray.map((numa) => 
+                    //  correct ans
                     `<div>
-                        <input type="radio" name="answer" value="${numa}" id="${numa}">
-                        <label class="" for="${numa}">${numa}</label>
+                        <input type="radio" name="answer" value="${numa}" id="correct">
+                        <label class="" for="correct">${numa}</label>
                     </div>`).join(' ');
+
                     console.log("* Offset is " + model.offSet());
                     console.log("* Ans A  is Correct");
+
                     showAnswerB.innerHTML = answerArray.map((numb) => 
+                    //  wrong answer
                     `<div>
-                        <input type="radio" name="answer" value="${model.offSet()}" id="${numb}">
-                        <label class="" for="${numb}">${model.offSet()}</label>
+                        <input type="radio" name="answer" value="${model.offSet()}" id="wrong">
+                        <label class="" for="wrong">${model.offSet()}</label>
                     </div>`).join(' ');
                     break;
 
             case 2: showAnswerA.innerHTML = answerArray.map((numa) => 
+                    //  wrong answer
                     `<div>
-                        <input type="radio" name="answer" value="${model.offSet()}" id="${numa}">
-                        <label class="" for="${numa}">${model.offSet()}</label>
+                        <input type="radio" name="answer" value="${model.offSet()}" id="wrong">
+                        <label class="" for="wrong">${model.offSet()}</label>
                     </div>`).join(' ');
+
                     showAnswerB.innerHTML = answerArray.map((numb) => 
+                    //  correct ans
                     `<div>
-                        <input type="radio" name="answer" value="${numb}" id="${numb}">
-                        <label class="" for="${numb}">${numb}</label>
+                        <input type="radio" name="answer" value="${numb}" id="correct">
+                        <label class="" for="correct">${numb}</label>
                     </div>`).join(' ');
+                    
                     console.log("* Offset is " + model.offSet());
                     console.log("* Ans B  is Correct");
                     break;
@@ -75,28 +83,28 @@ var view = {
     canvasColorChange: function() {
         const canvas = document.querySelector(".timer");
         if (model.isCorrect()) {
-            canvas.style.backgroundColor = "teal";
+            canvas.style.backgroundColor = "#335C67";
         } else {
-            canvas.style.backgroundColor = "red";
+            canvas.style.backgroundColor = "#540B0E";
         }
     },
 
     canvasColorReset: function() {
         const canvas = document.querySelector(".timer");
-        canvas.style.backgroundColor = "teal";
+        canvas.style.backgroundColor = "#335C67";
     },
     
     progressBar: function() {
         const progress = document.querySelector(".progress__bar");
         switch (model.errorCount) {
             case 0: progress.style.width = 100 + "%";
-                    progress.style.backgroundColor  = "teal";
+                    progress.style.backgroundColor  = "#335C67";
                     break;
             case 1: progress.style.width = 66.67 + "%";
-                    progress.style.backgroundColor  = "yellow";
+                    progress.style.backgroundColor  = "#FFF3B0";
                     break;
             case 2: progress.style.width = 33.33 + "%";
-                    progress.style.backgroundColor  = "red";
+                    progress.style.backgroundColor  = "#540B0E";
                     break;
             case 3: progress.style.width = 0 + "%";
                     break;
