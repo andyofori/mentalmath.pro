@@ -208,12 +208,13 @@ input[name=levels]:checked + label {
 }
 
 /* For medium devices */
-/* @media (min-width: 992px) {
+@media (min-width: 992px) {
     .timer {
-
+        height: calc(100vh - 354px);
     }
 
     .console {
-
+        position: fixed;
+        bottom: 0;
     }
-} */
+}
