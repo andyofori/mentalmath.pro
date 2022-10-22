@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Poppins&family=Roboto&family=Roboto+Mono&display=swap');
 
-/* --------------------------- BASE RULES / BASE STYLES ---------------------------- */
-:root {
+/* ------------------------------ BASE RULES / BASE STYLES ------------------------------ */
+:root { /* Or html {} */
     /* Layout */
     box-sizing: border-box;
 
@@ -15,7 +15,7 @@
     /* HSL color mode */
     --color-primary: #335C67;
     --color-secondary: hsl(60, 55.56%, 91.18%);
-    --color-tertiary: hsl(0, 0%, 86.27%);
+    --color-tertiary: #EB5E28;
     --color-black: hsl(0, 0%, 49%);
     --universal-yellow: #FFF3B0;
     --scroll-bar-color: var(--color-primary);
@@ -25,7 +25,7 @@
 *,
 ::before,
 ::after {
-    box-sizing: inherit; /* thired-party css compoonents might come with "content-box" top-level containers */
+    box-sizing: inherit; /* Third-party css compoonents might come with "content-box" top-level containers */
     padding: 0;
     margin: 0;
     overflow: hidden;
@@ -33,33 +33,39 @@
 
 body {
     font-family: var(--font-family);
-    background-color: hsl(0, 1%, 43%); /* or #d8d8d8 */
+    background-color: black;
 }
 
 
-/* --------------------------- MODULE RULES ---------------------------- */
+/* ------------------------------ MODULE RULES ------------------------------ */
+.container {
+    
+}
+
+.main {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.section {
+    
+}
+
 .timer {
     background-color: var(--color-primary);
     text-align: center;
     padding: .5em;
     color: var(--color-secondary);
     font-size: var(--font-size-secondary);
-    height: 100vh;
-}
-@media (max-width: 991.98px) {
-    .timer {
-        height: calc(100vh - 340px);
-    }
-    .console{
-        position: fixed;
-        bottom: 0;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.play-stop {
+/*---- TIMER ----*/
+
+.timer__play-stop {
     cursor: pointer;
-    /* background-color: var(--color-primary); */
-    /* padding: 2rem 0; */
     overflow-x: auto;
     width: 100%;
     height: 100%;
@@ -70,88 +76,102 @@ body {
     color: var(--universal-yellow);
 }
 
-.equation {
-    background-color: var(--color-tertiary);
+/*---- CONSOLE ----*/
+.console {
+    width: 100%;
 }
+/* Question */
+.console__question {
+    background-color: #FFFCF2;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
-.x, .y, .plus {
-    font-size: var(--font-size-primary);
-    color: var(--color-primary);
 }
-
-.answer {
-    font-size: var(--font-size-default);
+/* Answer */
+.console__answer {
     text-align: center;
 }
-.answer__a, .answer__b {
+.console__answer-a,
+.console__answer-b {
     font-size: var(--font-size-primary);
-}
-.answer.answer--one, .answer.answer--two {
     color: var(--color-tertiary);
     background-color: var(--color-secondary);
+    line-height: 2.5em;
 }
-.answer:hover {
-    background-color: white;
+.console__answer-a:hover,
+.console__answer-b:hover {
+    background-color: #FFFCF2;
 }
-
-
-/* ---------- PROGRESS BAR ---------- */
-.progress{
-    height: 50px;
+.console__x, .console__y, .console__plus {
+    font-size: var(--font-size-primary);
+    color: var(--color-primary);
 }
-.progress__bar {
-    transition: .4s;
-    /* width: 40%; */
-    /* background-color: var(--color-primary); */
-}
-
-input[name=levels] {
-    display:none;
-}
-/*
-  Hide radio button (the round disc)
-  we will use just the label to create pushbutton effect
-*/
 input[name=answer] {
-    display: none;
+    display: none; /* Hide radio button (the round disc) */
+}
+/* Progress */
+.console__progress {
+    background-color: #FFFCF2;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.console__progress-bar {
+    transition: .4s;
+}
+/* Difficulty */
+.console__difficulty {
+    background-color: whitesmoke;
+    display: -ms-flexbox; /* For IE10 */
+    display: -webkit-flex; /* For Safari 8 */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+input[name=levels] {
+    display: none; /* Hide radio button (the round disc) */
 }
 /*
-  Change the look'n'feel of labels (which are adjacent to radiobuttons).
-  Add some margin, padding to label
+    Change the look'n'feel of labels (which are adjacent to radiobuttons).
+    Add some margin, padding to label
 */
-input[name=levels] + label {/* could only be just "label" */
+input[name=levels] + label {/* could have been just "label" */
     cursor: pointer;
-    color: white;
+    color: var(--color-primary);
     font-size: var(--font-size-default);
-    margin: -2px;
-    padding: .9em 2.55rem;
-    width: 100%;
-    text-align: center;
-    /* background-color: var(--color-tertiary); */
+    line-height: 3em;
+    padding: .3em 1em;
+    border-radius: 2em;
+    font-size: calc(var(--font-size-default) + 10%);
 }
-
 /*
- Change background color for label next to checked radio button
- to make it look like highlighted button
+Change background color for label next to checked radio button
+to make it look like highlighted button
 */
 input[name=levels]:checked + label { 
+    background-color: #EB5E28;
     color: var(--color-primary);
-    /* background-color: var(--color-secondary); */
+    /* text-transform: uppercase; */
 }
 
-.footer {
+/*---- FOOTER ----*/
+.console__footer {
+    background-color: whitesmoke;
+}
+.console__footer-text {
     font-family: var(--font-family-footer);
-    background-color: var(--color-secondary);
-    font-size: calc(var(--font-size-default) - 30%);
+    font-size: calc(var(--font-size-default) - 25%);
     color: var(--color-black);
-    padding: .9em 0;
+    padding: .5em 0;
     margin-bottom: 0;
     width: 100%;
     text-align: center;
 }
 
 /* ---------- SCROLL BAR ---------- */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: .60rem;
     background-color: var(--scroll-bar-color);
 }
@@ -160,16 +180,40 @@ input[name=levels]:checked + label {
 }
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--scroll-thumb-hover-color);
-}
+} */
 
 
-/* ---------- UTILITY CLASSES ---------- */
-.box {
-    background-color: var(--color-tertiary);
-    /* border: black 1px solid; */
-    padding: 0;
+/* ------------------------------ UTILITY CLASSES ------------------------------ */
+.grid--question {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .pointer {
     cursor: pointer;
 }
+
+
+/* ---------- BREAKPOINTS ---------- */
+/* For small devices */
+@media (max-width: 991.98px) {
+    .timer {
+        height: calc(100vh - 354px);
+    }
+
+    .console {
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+/* For medium devices */
+/* @media (min-width: 992px) {
+    .timer {
+
+    }
+
+    .console {
+
+    }
+} */
