@@ -140,12 +140,12 @@ input[name=levels] {
     Change the look'n'feel of labels (which are adjacent to radiobuttons).
     Add some margin, padding to label
 */
-input[name=levels] + label {/* could have been just "label" */
+input[name=levels] + label { /* could have been just "label" */
     cursor: pointer;
     color: var(--color-primary);
     font-size: var(--font-size-default);
     line-height: 3em;
-    padding: .3em 3em;
+    padding: .3em 2em;
     border-radius: 2em;
     font-size: calc(var(--font-size-default) + 10%);
 }
