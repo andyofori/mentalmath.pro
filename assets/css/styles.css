@@ -196,7 +196,7 @@ input[name=levels]:checked + label {
 /* For small devices */
 @media (max-width: 991.98px) {
     .timer {
-        height: calc(100vh - 354px);
+        height: calc(100vh - 333.8px);
     }
 
     .console {
@@ -208,7 +208,7 @@ input[name=levels]:checked + label {
 /* For medium devices */
 @media (min-width: 992px) {
     .timer {
-        height: calc(100vh - 354px);
+        height: calc(100vh - 333.8px);
     }
 
     .console {
