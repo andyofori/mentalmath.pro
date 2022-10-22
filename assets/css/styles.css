@@ -87,10 +87,11 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    text-align: right;
 }
 .console__x,
 .console__y {
-    text-align: right;
+
 }
 /* Answer */
 .console__answer {
