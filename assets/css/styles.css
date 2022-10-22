@@ -142,7 +142,7 @@ input[name=levels] + label {/* could have been just "label" */
     color: var(--color-primary);
     font-size: var(--font-size-default);
     line-height: 3em;
-    padding: .3em 1em;
+    padding: .3em 3em;
     border-radius: 2em;
     font-size: calc(var(--font-size-default) + 10%);
 }
