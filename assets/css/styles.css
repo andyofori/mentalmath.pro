@@ -63,7 +63,6 @@ body {
 }
 
 /*---- TIMER ----*/
-
 .timer__play-stop {
     cursor: pointer;
     overflow-x: auto;
@@ -87,11 +86,6 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    text-align: right;
-}
-.console__x,
-.console__y {
-
 }
 /* Answer */
 .console__answer {
@@ -146,7 +140,7 @@ input[name=levels] + label { /* could have been just "label" */
     color: var(--color-primary);
     font-size: var(--font-size-default);
     line-height: 3em;
-    padding: .3em 2em;
+    padding: .3em 1.5em;
     border-radius: 2em;
     font-size: calc(var(--font-size-default) + 10%);
 }
