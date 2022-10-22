@@ -1,4 +1,4 @@
-var view = {
+let view = {
     timerDisplay: document.querySelector(".timer__figure"),
     
     /**
@@ -16,8 +16,8 @@ var view = {
      * operands unto the webpage
      */
     operandPrinter: function() {
-        const showXOperand =  document.querySelector(".x");
-        const showYOperand =  document.querySelector(".y");
+        const showXOperand =  document.querySelector(".console__x");
+        const showYOperand =  document.querySelector(".console__y");
         
         // Ensures that x always holds the greater number 
         if (model.operand1 > model.operand2) {
@@ -34,13 +34,13 @@ var view = {
         * one wrong and one correct
         */
     answerPrinters: function() {
-        const showAnswerA = document.querySelector(".answer__a");
-        const showAnswerB = document.querySelector(".answer__b");
+        const showAnswerA = document.querySelector(".console__answer-a");
+        const showAnswerB = document.querySelector(".console__answer-b");
         const answerArray = [model.equationAddition()];
 
         switch ((Math.floor(Math.random()*2)) + 1) {
             // insert radio buttons here
-            case 1: showAnswerA.innerHTML = answerArray.map((numa) => 
+           case 1: showAnswerA.innerHTML = answerArray.map((numa) => 
                     //  correct ans
                     `<div>
                         <input type="radio" name="answer" value="${numa}" id="correct">
@@ -76,7 +76,6 @@ var view = {
                     console.log("* Ans B  is Correct");
                     break;
         }
-
     },
 
     // Change color of Timer background based on correctness of User's choice
@@ -95,7 +94,7 @@ var view = {
     },
     
     progressBar: function() {
-        const progress = document.querySelector(".progress__bar");
+        const progress = document.querySelector(".console__progress-bar");
         switch (model.errorCount) {
             case 0: progress.style.width = 100 + "%";
                     progress.style.backgroundColor  = "#335C67";
@@ -111,8 +110,7 @@ var view = {
         }
     },
 }
-
-var model = {
+let model = {
     difficultyLevel: "Easy",    // initial level
     operand1: null,             // initial value of 1st operand
     operand2: null,             // initial value of 2nd operand
@@ -163,7 +161,7 @@ var model = {
             return this.equationAddition() + 1; // If one operand is a single digit. Meant for "normal".
         } else if (this.operand1 < 100 || this.operand2 < 100) {
             return this.equationAddition() + 10; // If one operand is in tens. Meant for "hard".
-        } else { // If both operands are of equal expected lenghts
+        } else { // If both operands are of equal lenghts
             switch (this.difficultyLevel) {
                 case "easy": return this.equationAddition() + 1;
                 case "normal": return this.equationAddition() + 10;
@@ -223,7 +221,7 @@ var model = {
     }
 }
 
-var controller = {
+let controller = {
     /**⚖︎
         * This method prints the current 
         * operands unto the webpage
@@ -306,6 +304,13 @@ var controller = {
 
 
 
+
+
+
+
+
+
+
     
 //////////////
 //Progress__Bar
@@ -317,7 +322,7 @@ model.localStorageForDifficulty();
 
 
 //  Play/Stop + Radio (difficulty) buttons
-const btn = document.querySelector(".play-stop");        
+const btn = document.querySelector(".timer__play-stop");        
 // Radio buttons
 btn.addEventListener("click", () => {
     if (model.playerHasLives()) {    //  If player still hasn't finished
@@ -381,6 +386,8 @@ btn.addEventListener("click", () => {
             //Cause start/stop button to RESTART on next pressing
             btn.value = "play";
             btn.innerHTML = "Ans: " + model.equationAddition();
+            //Prevent response when answer choices are pressed at STOP
+            controller.printAnswerChoices();
             
             //Count errors
             controller.progressControl();
