@@ -47,9 +47,6 @@ let view = {
                         <label class="" for="correct">${numa}</label>
                     </div>`).join(' ');
 
-                    console.log("* Offset is " + model.offSet());
-                    console.log("* Ans A  is Correct");
-
                     showAnswerB.innerHTML = answerArray.map((numb) => 
                     //  wrong answer
                     `<div>
@@ -71,9 +68,6 @@ let view = {
                         <input type="radio" name="answer" value="${numb}" id="correct">
                         <label class="" for="correct">${numb}</label>
                     </div>`).join(' ');
-                    
-                    console.log("* Offset is " + model.offSet());
-                    console.log("* Ans B  is Correct");
                     break;
         }
     },
