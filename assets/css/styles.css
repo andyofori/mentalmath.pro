@@ -111,7 +111,7 @@ input[name=answer] {
 }
 /* Progress */
 .console__progress {
-    background-color: #FFFCF2;
+    background-color: whitesmoke;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -141,7 +141,7 @@ input[name=levels] + label { /* could have been just "label" */
     font-size: var(--font-size-default);
     line-height: 3em;
     padding: .3em 1.5em;
-    border-radius: 2em;
+    /* border-radius: 2em; */
     font-size: calc(var(--font-size-default) + 10%);
 }
 /*
@@ -150,7 +150,7 @@ to make it look like highlighted button
 */
 input[name=levels]:checked + label { 
     background-color: #EB5E28;
-    color: var(--color-primary);
+    color: whitesmoke;
     /* text-transform: uppercase; */
 }
 
