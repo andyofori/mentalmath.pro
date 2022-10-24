@@ -198,7 +198,7 @@ let model = {
         * radio buttons.
      */
     localStorageForDifficulty: function() {
-        console.log(localStorage.getItem("difficultyOnDisk") + " difficulty");
+        // console.log(localStorage.getItem("difficultyOnDisk") + " difficulty");
         if (localStorage.getItem("difficultyOnDisk") !== null) { //If key exists
             switch (localStorage.getItem("difficultyOnDisk")) {
                 case "easy":    return document.getElementById("radio-easy").checked = true;
@@ -345,11 +345,11 @@ btn.addEventListener("click", () => {
                     
                     // invoke invigilator and ekepp running the game till game over
                     if (model.isCorrect()) {
-                        console.log("///// CORRECT ANS.");
+                        // console.log("///// CORRECT ANS.");
                         btn.click();
                         btn.click();
                     } else {
-                        console.log("/////   WRONG ANS.");
+                        // console.log("/////   WRONG ANS.");
                         btn.click();
                         btn.click();
                     }
@@ -387,11 +387,11 @@ btn.addEventListener("click", () => {
             controller.progressControl();
             //Progress__Bar
             view.progressBar(); //Game over Bar. For the final removal of the bar.
-            console.log("Errors: " + model.errorCount);
+            // console.log("Errors: " + model.errorCount);
         }
     } else { // GAME OVER
         btn.innerHTML = "Play";
-        console.log("STOPPED since errors made is: " + model.errorCount);
+        // console.log("STOPPED since errors made is: " + model.errorCount);
         model.errorCount = 0;
     }
 });
