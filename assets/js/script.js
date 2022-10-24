@@ -1,1 +1,405 @@
-function _0x2b50(){const _0xce2cd=['click','easy\x20auto\x20assigned','answer','/////\x20\x20\x20WRONG\x20ANS.','eUotD','Play','addEventListener','isCorrect','.console__answer-b','<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22radio\x22\x20name=\x22answer\x22\x20value=\x22','TItlN','AHeZX','</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','change','join','checked','printAnswerChoices','KZKED','answerPrinters','timerDisplay','getItem','play','ZONDU','canvasColorChange','iCltw','3689540fCXMUU','.console__x','countdownDisplay','radio-easy','4EICvgn','2114854CguvNO','\x22\x20id=\x22correct\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22\x22\x20for=\x22correct\x22>','tSauR','.timer__play-stop','map','backgroundColor','JxDQt','easy','floor','feiWY','#335C67','#540B0E','#FFF3B0','hard','.console__progress-bar','localStorageForDifficulty','532803WYTuQx','value','STOPPED\x20since\x20errors\x20made\x20is:\x20','operand1','QXXIx','random','canvasColorReset','.console__y','.timer','input[name=\x22answer\x22]','printOperands','\x20difficulty','/////\x20CORRECT\x20ANS.','log','operand2','style','normal','mainCounter','13415456LcKlwJ','difficultyOnDisk','randomNew','300736PbeLHG','difficultySwitch','Errors:\x20','querySelector','getElementById','querySelectorAll','.timer__figure','input[name=\x22levels\x22]','choice','errorCount','setTimerAndOperands','\x22\x20id=\x22wrong\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22\x22\x20for=\x22wrong\x22>','equationAddition','Ans:\x20','2205651kChyaT','playerHasLives','progressBar','2945550uCcXBg','difficultyLevel','width','innerHTML','jGitE'];_0x2b50=function(){return _0xce2cd;};return _0x2b50();}const _0x1ae7ac=_0x51a2;(function(_0x30dd41,_0x1c761f){const _0x40123=_0x51a2,_0x9c846=_0x30dd41();while(!![]){try{const _0x5ddce5=parseInt(_0x40123(0x1e8))/0x1+-parseInt(_0x40123(0x1c3))/0x2+parseInt(_0x40123(0x1d3))/0x3*(parseInt(_0x40123(0x1c2))/0x4)+-parseInt(_0x40123(0x1be))/0x5+parseInt(_0x40123(0x1f9))/0x6+-parseInt(_0x40123(0x1f6))/0x7+parseInt(_0x40123(0x1e5))/0x8;if(_0x5ddce5===_0x1c761f)break;else _0x9c846['push'](_0x9c846['shift']());}catch(_0x510e89){_0x9c846['push'](_0x9c846['shift']());}}}(_0x2b50,0x82cd6));let view={'timerDisplay':document[_0x1ae7ac(0x1eb)](_0x1ae7ac(0x1ee)),'countdownDisplay':function(){const _0x400c02=_0x1ae7ac;this[_0x400c02(0x211)][_0x400c02(0x1fc)]=countdownTimer,countdownTimer--;},'operandPrinter':function(){const _0x574536=_0x1ae7ac,_0xddda5e=document['querySelector'](_0x574536(0x1bf)),_0x25635f=document['querySelector'](_0x574536(0x1da));model[_0x574536(0x1d6)]>model[_0x574536(0x1e1)]?(_0xddda5e[_0x574536(0x1fc)]=model['operand1'],_0x25635f[_0x574536(0x1fc)]=model[_0x574536(0x1e1)]):(_0xddda5e[_0x574536(0x1fc)]=model[_0x574536(0x1e1)],_0x25635f[_0x574536(0x1fc)]=model[_0x574536(0x1d6)]);},'answerPrinters':function(){const _0x41a66a=_0x1ae7ac,_0x18849e=document[_0x41a66a(0x1eb)]('.console__answer-a'),_0x3e7a13=document[_0x41a66a(0x1eb)](_0x41a66a(0x206)),_0x58a9c4=[model[_0x41a66a(0x1f4)]()];switch(Math['floor'](Math['random']()*0x2)+0x1){case 0x1:_0x18849e['innerHTML']=_0x58a9c4['map'](_0x2614a1=>'<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22radio\x22\x20name=\x22answer\x22\x20value=\x22'+_0x2614a1+_0x41a66a(0x1c4)+_0x2614a1+_0x41a66a(0x20a))['join']('\x20'),_0x3e7a13[_0x41a66a(0x1fc)]=_0x58a9c4[_0x41a66a(0x1c7)](_0x492741=>_0x41a66a(0x207)+model['offSet']()+_0x41a66a(0x1f3)+model['offSet']()+'</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>')['join']('\x20');break;case 0x2:_0x18849e[_0x41a66a(0x1fc)]=_0x58a9c4[_0x41a66a(0x1c7)](_0x504621=>_0x41a66a(0x207)+model['offSet']()+_0x41a66a(0x1f3)+model['offSet']()+_0x41a66a(0x20a))[_0x41a66a(0x20c)]('\x20'),_0x3e7a13['innerHTML']=_0x58a9c4['map'](_0x3b8319=>_0x41a66a(0x207)+_0x3b8319+_0x41a66a(0x1c4)+_0x3b8319+'</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>')[_0x41a66a(0x20c)]('\x20');break;}},'canvasColorChange':function(){const _0x26b773=_0x1ae7ac,_0x34cbaa=document[_0x26b773(0x1eb)]('.timer');model[_0x26b773(0x205)]()?_0x34cbaa[_0x26b773(0x1e2)]['backgroundColor']=_0x26b773(0x1cd):_0x34cbaa['style'][_0x26b773(0x1c8)]=_0x26b773(0x1ce);},'canvasColorReset':function(){const _0x3689de=_0x1ae7ac,_0x14c189=document[_0x3689de(0x1eb)](_0x3689de(0x1db));_0x14c189[_0x3689de(0x1e2)][_0x3689de(0x1c8)]=_0x3689de(0x1cd);},'progressBar':function(){const _0x1c638e=_0x1ae7ac,_0x2b68d2=document[_0x1c638e(0x1eb)](_0x1c638e(0x1d1));switch(model[_0x1c638e(0x1f1)]){case 0x0:_0x2b68d2[_0x1c638e(0x1e2)][_0x1c638e(0x1fb)]=0x64+'%',_0x2b68d2[_0x1c638e(0x1e2)][_0x1c638e(0x1c8)]=_0x1c638e(0x1cd);break;case 0x1:_0x2b68d2[_0x1c638e(0x1e2)]['width']=66.67+'%',_0x2b68d2['style'][_0x1c638e(0x1c8)]=_0x1c638e(0x1cf);break;case 0x2:_0x2b68d2[_0x1c638e(0x1e2)][_0x1c638e(0x1fb)]=33.33+'%',_0x2b68d2[_0x1c638e(0x1e2)][_0x1c638e(0x1c8)]=_0x1c638e(0x1ce);break;case 0x3:_0x2b68d2[_0x1c638e(0x1e2)]['width']=0x0+'%';break;}}},model={'difficultyLevel':'Easy','operand1':null,'operand2':null,'answer':null,'errorCount':0x0,'playerHasLives':function(){const _0x23448a=_0x1ae7ac;if(this[_0x23448a(0x1f1)]<0x3)return _0x23448a(0x202)!==_0x23448a(0x202)?!![]:!![];},'setUserAnswer':function(_0x4cef84){const _0x3adf71=_0x1ae7ac;this[_0x3adf71(0x200)]=_0x4cef84;},'equationAddition':function(_0x35a981,_0x54e911){const _0x1d777e=_0x1ae7ac;var _0x36db01=this[_0x1d777e(0x1d6)]+this[_0x1d777e(0x1e1)];return this['answer']=_0x36db01,_0x36db01;},'offSet':function(){const _0x3d1768=_0x1ae7ac;if(this[_0x3d1768(0x1d6)]<0xa||this[_0x3d1768(0x1e1)]<0xa){if(_0x3d1768(0x209)!==_0x3d1768(0x209))_0x435ac3['click'](),_0x27e457[_0x3d1768(0x1fe)]();else return this[_0x3d1768(0x1f4)]()+0x1;}else{if(this[_0x3d1768(0x1d6)]<0x64||this[_0x3d1768(0x1e1)]<0x64){if(_0x3d1768(0x1c9)!=='JxDQt')_0x34f72f[_0x3d1768(0x1e2)][_0x3d1768(0x1c8)]=_0x3d1768(0x1cd);else return this[_0x3d1768(0x1f4)]()+0xa;}else switch(this[_0x3d1768(0x1fa)]){case _0x3d1768(0x1ca):return this['equationAddition']()+0x1;case _0x3d1768(0x1e3):return this[_0x3d1768(0x1f4)]()+0xa;case _0x3d1768(0x1d0):return this[_0x3d1768(0x1f4)]()+0x64;break;}}},'randomNew':function(){const _0x1adc19=_0x1ae7ac;switch(this[_0x1adc19(0x1fa)]){case'easy':return Math[_0x1adc19(0x1cb)](Math[_0x1adc19(0x1d8)]()*0xa);case _0x1adc19(0x1e3):return Math[_0x1adc19(0x1cb)](Math['random']()*0x64);case'hard':return Math[_0x1adc19(0x1cb)](Math[_0x1adc19(0x1d8)]()*0x3e8);break;}},'isCorrect':function(){const _0x383c02=_0x1ae7ac;if(this[_0x383c02(0x1f0)]==this['answer'])return!![];else{if('nKNgO'!==_0x383c02(0x1bd))return![];else _0x45c95c[_0x383c02(0x1f0)]=this[_0x383c02(0x1d4)],_0x4d3b26[_0x383c02(0x205)]()?(_0x50aa23['log'](_0x383c02(0x1df)),_0x349179['click'](),_0x54a1a5[_0x383c02(0x1fe)]()):(_0x56c81b[_0x383c02(0x1e0)](_0x383c02(0x201)),_0x456845['click'](),_0x54ee49[_0x383c02(0x1fe)]());}},'localStorageForDifficulty':function(){const _0x50a010=_0x1ae7ac;console['log'](localStorage[_0x50a010(0x212)](_0x50a010(0x1e6))+_0x50a010(0x1de));if(localStorage[_0x50a010(0x212)](_0x50a010(0x1e6))!==null){if('tSauR'===_0x50a010(0x1c5))switch(localStorage['getItem']('difficultyOnDisk')){case _0x50a010(0x1ca):return document[_0x50a010(0x1ec)](_0x50a010(0x1c1))[_0x50a010(0x20d)]=!![];break;case'normal':return document[_0x50a010(0x1ec)]('radio-normal')[_0x50a010(0x20d)]=!![];break;case _0x50a010(0x1d0):return document[_0x50a010(0x1ec)]('radio-hard')['checked']=!![];break;}else _0x335f06[_0x50a010(0x1fc)]=_0x50a010(0x203),_0x240250[_0x50a010(0x1e0)](_0x50a010(0x1d5)+_0x1f9598[_0x50a010(0x1f1)]),_0x5231fe[_0x50a010(0x1f1)]=0x0;}else document[_0x50a010(0x1ec)]('radio-easy')[_0x50a010(0x20d)]=!![],console[_0x50a010(0x1e0)](_0x50a010(0x1ff));}},controller={'printOperands':function(){view['operandPrinter']();},'printAnswerChoices':function(){const _0x2ae8a4=_0x1ae7ac;view[_0x2ae8a4(0x210)]();},'difficultySwitch':function(_0x1d860c){const _0x32dfc2=_0x1ae7ac,_0xcd0ba2=document[_0x32dfc2(0x1ed)](_0x32dfc2(0x1ef));for(const _0x3d46a6 of _0xcd0ba2){if(_0x3d46a6['checked']){if(_0x32dfc2(0x1fd)===_0x32dfc2(0x1cc))return!![];else{_0x1d860c=_0x3d46a6[_0x32dfc2(0x1d4)];break;}}}switch(_0x1d860c){case'easy':this[_0x32dfc2(0x1f2)](_0x1d860c,0x5);break;case _0x32dfc2(0x1e3):this[_0x32dfc2(0x1f2)](_0x1d860c,0xa);break;case'hard':this[_0x32dfc2(0x1f2)](_0x1d860c,0xf);break;}},'setTimerAndOperands':function(_0x10fd12,_0x5a1907){const _0x38cff5=_0x1ae7ac;model['difficultyLevel']=_0x10fd12,model[_0x38cff5(0x1d6)]=model[_0x38cff5(0x1e7)](),model['operand2']=model[_0x38cff5(0x1e7)](),countdownTimer=_0x5a1907,localStorage['setItem'](_0x38cff5(0x1e6),_0x10fd12);},'progressControl':function(){const _0x25a8c4=_0x1ae7ac;if(!model[_0x25a8c4(0x205)]())model[_0x25a8c4(0x1f1)]++;else{if(model[_0x25a8c4(0x205)]()&&model[_0x25a8c4(0x1f1)]>0x0){if(_0x25a8c4(0x214)==='JpPuV'){if(!_0x14526a[_0x25a8c4(0x205)]())_0x43d5c5[_0x25a8c4(0x1f1)]++;else _0x27fae2[_0x25a8c4(0x205)]()&&_0x8ace19[_0x25a8c4(0x1f1)]>0x0&&_0x3db06d[_0x25a8c4(0x1f1)]--;}else model[_0x25a8c4(0x1f1)]--;}}}};view[_0x1ae7ac(0x1f8)](),model[_0x1ae7ac(0x1d2)]();const btn=document[_0x1ae7ac(0x1eb)](_0x1ae7ac(0x1c6));btn[_0x1ae7ac(0x204)](_0x1ae7ac(0x1fe),()=>{const _0x4b7bf2=_0x1ae7ac;if(model[_0x4b7bf2(0x1f7)]()){if(_0x4b7bf2(0x20f)!=='dnpVg'){model[_0x4b7bf2(0x1f1)]==0x0&&view[_0x4b7bf2(0x1d9)]();if(btn['value']==_0x4b7bf2(0x213)){let _0x48ec93;controller[_0x4b7bf2(0x1e9)](_0x48ec93),controller[_0x4b7bf2(0x1dd)](),controller[_0x4b7bf2(0x20e)](),view[_0x4b7bf2(0x1f8)]();const _0xd77d82=document[_0x4b7bf2(0x1ed)](_0x4b7bf2(0x1dc));for(const _0x2bd55b of _0xd77d82){if(_0x4b7bf2(0x1d7)!==_0x4b7bf2(0x1d7))return this[_0x4b7bf2(0x1f0)]==this[_0x4b7bf2(0x200)]?!![]:![];else _0x2bd55b[_0x4b7bf2(0x204)](_0x4b7bf2(0x20b),function(_0x5ed309){const _0x3efd63=_0x4b7bf2;model[_0x3efd63(0x1f0)]=this[_0x3efd63(0x1d4)],model['isCorrect']()?(console['log'](_0x3efd63(0x1df)),btn['click'](),btn[_0x3efd63(0x1fe)]()):_0x3efd63(0x208)!==_0x3efd63(0x208)?_0x3738d6[_0x3efd63(0x204)](_0x3efd63(0x20b),function(_0x57e865){const _0xd94341=_0x3efd63;_0x5baf06[_0xd94341(0x1f0)]=this['value'],_0xafc045[_0xd94341(0x205)]()?(_0x474c36[_0xd94341(0x1e0)]('/////\x20CORRECT\x20ANS.'),_0x11b753[_0xd94341(0x1fe)](),_0x1d7692[_0xd94341(0x1fe)]()):(_0x2b94b1[_0xd94341(0x1e0)](_0xd94341(0x201)),_0x38d0ff['click'](),_0x36bb03[_0xd94341(0x1fe)]());}):(console['log'](_0x3efd63(0x201)),btn[_0x3efd63(0x1fe)](),btn[_0x3efd63(0x1fe)]());});}controller[_0x4b7bf2(0x1e4)]=setInterval(function _0x3ecd24(){const _0x214172=_0x4b7bf2;return view[_0x214172(0x1c0)](),countdownTimer==-0x2&&(btn[_0x214172(0x1fe)](),btn[_0x214172(0x1fe)]()),_0x3ecd24;}(),0x3e8),btn[_0x4b7bf2(0x1d4)]='stop';}else clearInterval(controller['mainCounter']),view[_0x4b7bf2(0x1bc)](),btn[_0x4b7bf2(0x1d4)]=_0x4b7bf2(0x213),btn[_0x4b7bf2(0x1fc)]=_0x4b7bf2(0x1f5)+model[_0x4b7bf2(0x1f4)](),controller['printAnswerChoices'](),controller['progressControl'](),view[_0x4b7bf2(0x1f8)](),console[_0x4b7bf2(0x1e0)](_0x4b7bf2(0x1ea)+model[_0x4b7bf2(0x1f1)]);}else{const _0x40a257=_0x6e3128[_0x4b7bf2(0x1eb)]('.timer');_0xdddf37[_0x4b7bf2(0x205)]()?_0x40a257[_0x4b7bf2(0x1e2)][_0x4b7bf2(0x1c8)]=_0x4b7bf2(0x1cd):_0x40a257[_0x4b7bf2(0x1e2)][_0x4b7bf2(0x1c8)]='#540B0E';}}else btn[_0x4b7bf2(0x1fc)]=_0x4b7bf2(0x203),console['log'](_0x4b7bf2(0x1d5)+model[_0x4b7bf2(0x1f1)]),model[_0x4b7bf2(0x1f1)]=0x0;});function _0x51a2(_0xde64cc,_0xd8a663){const _0x2b50c8=_0x2b50();return _0x51a2=function(_0x51a2a0,_0x401029){_0x51a2a0=_0x51a2a0-0x1bc;let _0x4654d2=_0x2b50c8[_0x51a2a0];return _0x4654d2;},_0x51a2(_0xde64cc,_0xd8a663);}var countdownTimer;
+let view = {
+    timerDisplay: document.querySelector(".timer__figure"),
+    
+    /**
+     * This method displays the 
+     * countdown time on the webpage
+     */
+    countdownDisplay: function() {
+        //console.log(countdownTimer);//disable for log
+        this.timerDisplay.innerHTML = countdownTimer;
+        countdownTimer--;
+    },
+
+    /**
+     * This method prints the current
+     * operands unto the webpage
+     */
+    operandPrinter: function() {
+        const showXOperand =  document.querySelector(".console__x");
+        const showYOperand =  document.querySelector(".console__y");
+        
+        // Ensures that x always holds the greater number 
+        if (model.operand1 > model.operand2) {
+            showXOperand.innerHTML = model.operand1;
+            showYOperand.innerHTML = model.operand2;
+        } else {
+            showXOperand.innerHTML = model.operand2;
+            showYOperand.innerHTML = model.operand1;
+        }
+    },
+    
+    /**
+        * This method prints two possible answers,
+        * one wrong and one correct
+        */
+    answerPrinters: function() {
+        const showAnswerA = document.querySelector(".console__answer-a");
+        const showAnswerB = document.querySelector(".console__answer-b");
+        const answerArray = [model.equationAddition()];
+
+        switch ((Math.floor(Math.random()*2)) + 1) {
+            // insert radio buttons here
+           case 1: showAnswerA.innerHTML = answerArray.map((numa) => 
+                    //  correct ans
+                    `<div>
+                        <input type="radio" name="answer" value="${numa}" id="correct">
+                        <label class="" for="correct">${numa}</label>
+                    </div>`).join(' ');
+
+                    showAnswerB.innerHTML = answerArray.map((numb) => 
+                    //  wrong answer
+                    `<div>
+                        <input type="radio" name="answer" value="${model.offSet()}" id="wrong">
+                        <label class="" for="wrong">${model.offSet()}</label>
+                    </div>`).join(' ');
+                    break;
+
+            case 2: showAnswerA.innerHTML = answerArray.map((numa) => 
+                    //  wrong answer
+                    `<div>
+                        <input type="radio" name="answer" value="${model.offSet()}" id="wrong">
+                        <label class="" for="wrong">${model.offSet()}</label>
+                    </div>`).join(' ');
+
+                    showAnswerB.innerHTML = answerArray.map((numb) => 
+                    //  correct ans
+                    `<div>
+                        <input type="radio" name="answer" value="${numb}" id="correct">
+                        <label class="" for="correct">${numb}</label>
+                    </div>`).join(' ');
+                    break;
+        }
+    },
+
+    // Change color of Timer background based on correctness of User's choice
+    canvasColorChange: function() {
+        const canvas = document.querySelector(".timer");
+        if (model.isCorrect()) {
+            canvas.style.backgroundColor = "#335C67";
+        } else {
+            canvas.style.backgroundColor = "#540B0E";
+        }
+    },
+
+    canvasColorReset: function() {
+        const canvas = document.querySelector(".timer");
+        canvas.style.backgroundColor = "#335C67";
+    },
+    
+    progressBar: function() {
+        const progress = document.querySelector(".console__progress-bar");
+        switch (model.errorCount) {
+            case 0: progress.style.width = 100 + "%";
+                    progress.style.backgroundColor  = "#335C67";
+                    break;
+            case 1: progress.style.width = 66.67 + "%";
+                    progress.style.backgroundColor  = "#FFF3B0";
+                    break;
+            case 2: progress.style.width = 33.33 + "%";
+                    progress.style.backgroundColor  = "#540B0E";
+                    break;
+            case 3: progress.style.width = 0 + "%";
+                    break;
+        }
+    },
+}
+let model = {
+    difficultyLevel: "Easy",    // initial level
+    operand1: null,             // initial value of 1st operand
+    operand2: null,             // initial value of 2nd operand
+    answer: null,               // initial value for the equation sum
+    //this.choice (or model.choice) will be set on-the-fly
+    errorCount: 0,
+
+    /**
+        * This method returns true if the player has not exhausted their
+        * chances/lives or if it is a fresh game (fresh start).
+        * @return true if player has not used up all 3 chances or just started
+    */
+    playerHasLives: function() {
+        if (this.errorCount < 3) {
+            return true;
+        }
+    },
+    
+    /**
+        * This method sets the userAnswer property of 
+        * this object
+        * @param ans The answer value from the user
+        */
+    setUserAnswer: function(ans) {
+        this.answer = ans;
+    },
+
+    /**
+        * This method returns the sum of 2 randomly 
+        * generated operands
+        * @param operand1 The first operand
+        * @param operand2 The second operand
+        * @return Their sum
+        */
+    equationAddition: function(operand1, operand2) {
+        var sum = this.operand1 + this.operand2;
+        this.answer = sum;
+        return sum;
+    },
+
+    /**
+     * This method offsets one of the answer options.
+     * It provides special 
+     * @returns the offset figure
+     */
+    offSet: function() {
+        if (this.operand1 < 10 || this.operand2 < 10) {
+            return this.equationAddition() + 1; // If one operand is a single digit. Meant for "normal".
+        } else if (this.operand1 < 100 || this.operand2 < 100) {
+            return this.equationAddition() + 10; // If one operand is in tens. Meant for "hard".
+        } else { // If both operands are of equal lenghts
+            switch (this.difficultyLevel) {
+                case "easy": return this.equationAddition() + 1;
+                case "normal": return this.equationAddition() + 10;
+                case "hard": return this.equationAddition() + 100;
+                break;
+            }
+        }
+    },
+
+    /**
+        * This method generates a random number
+        * based on current difficulty level
+        * @return A random number 
+        */
+    randomNew: function() {
+        switch (this.difficultyLevel) {
+                case "easy": return Math.floor(Math.random()*10);
+                case "normal": return Math.floor(Math.random()*100);
+                case "hard": return Math.floor(Math.random()*1000);
+                break;
+            }
+    },
+
+    /** 
+        * This method compares user's answer with correct answer
+        * @return true if they match
+        * @return false if they don't match
+        */
+    isCorrect: function() {
+        if (this.choice == this.answer) {
+            return true;
+        } else {
+            return false;
+        }
+    },
+
+    /**
+        * This method reads difficulty level from local storage if it exists.
+        * @returns a state of "easy", "normal" or "hard" selections for the difficulty
+        * radio buttons.
+     */
+    localStorageForDifficulty: function() {
+        console.log(localStorage.getItem("difficultyOnDisk") + " difficulty");
+        if (localStorage.getItem("difficultyOnDisk") !== null) { //If key exists
+            switch (localStorage.getItem("difficultyOnDisk")) {
+                case "easy":    return document.getElementById("radio-easy").checked = true;
+                                break;
+                case "normal":  return document.getElementById("radio-normal").checked = true;
+                                break;
+                case "hard":    return document.getElementById("radio-hard").checked = true;
+                                break;
+                }
+        } else { //If key doesn't exist, assign "easy" as the default
+            document.getElementById("radio-easy").checked = true;
+            console.log("easy auto assigned");
+        }
+    }
+}
+
+let controller = {
+    /**⚖︎
+        * This method prints the current 
+        * operands unto the webpage
+        */
+    printOperands: function() {
+        view.operandPrinter();
+    },
+
+    /**
+        * This method prints the two answer choices
+        */
+    printAnswerChoices: function() {
+        view.answerPrinters();
+    },
+
+    /**
+        * Difficulty Switch.
+        * ...handles difficulty level selection via radio buttons
+        * ...calls the necessary method to store difficulty level 
+        * and to set the corresponding duration
+        */
+    difficultySwitch: function(selectedDifficulty) {
+        const difficultyRadioButtons = document.querySelectorAll('input[name="levels"]');
+
+        //Assign difficulty according to the checked radio button
+        for (const difficultyRadioButton of difficultyRadioButtons) {
+            if (difficultyRadioButton.checked) {
+                selectedDifficulty = difficultyRadioButton.value;
+                break;
+            }
+        }
+
+        //Set difficulty level
+        switch (selectedDifficulty) {
+            case "easy":    this.setTimerAndOperands(selectedDifficulty, 5);
+                            break;
+            case "normal":  this.setTimerAndOperands(selectedDifficulty, 10);
+                            break;
+            case "hard":    this.setTimerAndOperands(selectedDifficulty, 15);
+                            break;
+            }
+    },
+    
+    /**
+    * This method sets the timer and the next operand numbers.
+    * It also sets the difficulty level and then stores it on local disk
+    * @param selectedDifficulty Holds user's radio selection. It is needed by model.randomNew for operands to be generated in the appropriate ranges that match the difficulty level that the user has selected.
+    * @param time Holds the number of seconds for countdownTimer
+    */
+    setTimerAndOperands: function(selectedDifficulty, time) {
+        model.difficultyLevel = selectedDifficulty;
+        model.operand1 = model.randomNew();
+        model.operand2 = model.randomNew();
+        countdownTimer = time;
+        //Write difficulty level to local storage
+        localStorage.setItem("difficultyOnDisk", selectedDifficulty);
+    },
+
+    /**
+        * This method increases and decreases user error count
+        * whiles keeping it above zero.
+        */
+     progressControl: function() {
+        if (!model.isCorrect()) {
+            model.errorCount++;  //  If wrong answer, add one. Max count is 2
+        } else if (model.isCorrect() && model.errorCount > 0) {
+            model.errorCount--;  //  If right answer, minus one. Min is 0.
+        }
+    },
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+//////////////
+//Progress__Bar
+view.progressBar(); //Initial Bar. This fills the bar before the game runs.
+
+//Read difficulty level from local storage if it exists
+//or assign a first-time default of "easy" 
+model.localStorageForDifficulty();
+
+
+//  Play/Stop + Radio (difficulty) buttons
+const btn = document.querySelector(".timer__play-stop");        
+// Radio buttons
+btn.addEventListener("click", () => {
+    if (model.playerHasLives()) {    //  If player still hasn't finished
+        if (model.errorCount == 0) {    //  If it's a fresh game...
+            view.canvasColorReset();    //  ...reset the canvas color
+        }
+        if (btn.value == "play") { //   If Play/Stop Button value is "Play"            
+            //Handle difficulty level selection via radio buttons
+            let selectedDifficulty;
+            controller.difficultySwitch(selectedDifficulty);
+
+            //Display operands
+            controller.printOperands();
+            //Display possible answer choices
+            controller.printAnswerChoices();
+            
+            //Progress__Bar
+            view.progressBar(); //In-game Bar. This fills the bar in-game.
+            
+            // Get user choice and cross-check with correct equation answer
+            const answerRadioButton = document.querySelectorAll('input[name="answer"]');
+            for (const radioButton of answerRadioButton) {
+                radioButton.addEventListener("change", function(e){
+                    // set the property for the user's answer choice
+                    model.choice = this.value;
+                    
+                    // invoke invigilator and ekepp running the game till game over
+                    if (model.isCorrect()) {
+                        console.log("///// CORRECT ANS.");
+                        btn.click();
+                        btn.click();
+                    } else {
+                        console.log("/////   WRONG ANS.");
+                        btn.click();
+                        btn.click();
+                    }
+                });
+            }    
+            //Countdown
+            controller.mainCounter = setInterval(function hello() {
+                view.countdownDisplay();
+                /**
+                 * If timer reaches "0", or in this case -2,
+                 * stop and start again.
+                 * -2 not zero due to setInterval's 
+                 * delay correction via recurssion
+                 */
+                if (countdownTimer == -2) {
+                    btn.click();
+                    btn.click();
+                }
+                return hello;
+            }(), 1000);           
+            //Cause Start/Stop Button to STOP on next pressing
+            btn.value = "stop";          
+        } else { // Else if the Stop Button (now the countdown timer) is pressed
+            //Clear the timer for next (re)start
+            clearInterval(controller.mainCounter);
+            // Change canvas color based on answer
+            view.canvasColorChange();
+            //Cause start/stop button to RESTART on next pressing
+            btn.value = "play";
+            btn.innerHTML = "Ans: " + model.equationAddition();
+            //Prevent response when answer choices are pressed at STOP
+            controller.printAnswerChoices();
+            
+            //Count errors
+            controller.progressControl();
+            //Progress__Bar
+            view.progressBar(); //Game over Bar. For the final removal of the bar.
+            console.log("Errors: " + model.errorCount);
+        }
+    } else { // GAME OVER
+        btn.innerHTML = "Play";
+        console.log("STOPPED since errors made is: " + model.errorCount);
+        model.errorCount = 0;
+    }
+});
+
+
+
+
+
+//////////////
+//  Countdown timer - a Global variable
+var countdownTimer;
