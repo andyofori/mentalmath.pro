@@ -9,8 +9,8 @@
     --font-size-default: .875em; /* sets the default size to 14px (i.e. 14/16 = 0.875) */
     --font-size-primary: 3rem;
     --font-size-secondary: calc(2em + 1vw);
-    --font-family: "Roboto", Helvetica, Arial, sans-serif;
-    --font-family-footer: "Roboto Mono", Helvetica, Arial, sans-serif;
+    --font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    --font-family-footer: "Roboto Mono", "Helvetica", "Arial", sans-serif;
 
     /* HSL color mode */
     --color-primary: #335C67;
@@ -38,18 +38,18 @@ body {
 
 
 /* ------------------------------ MODULE RULES ------------------------------ */
-.container {
+/* .container {
     
-}
+} */
 
 .main {
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
 
-.section {
+/* .section {
     
-}
+} */
 
 .timer {
     background-color: var(--color-primary);
