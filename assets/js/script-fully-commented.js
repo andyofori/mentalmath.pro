@@ -296,6 +296,10 @@ let controller = {
 
 
 
+//////////////
+//  Countdown timer - a Global variable
+var countdownTimer;
+
 
 
 
@@ -390,16 +394,8 @@ btn.addEventListener("click", () => {
             // console.log("Errors: " + model.errorCount);
         }
     } else { // GAME OVER
-        btn.innerHTML = "Play";
+        btn.innerHTML = "GAME OVER";
         // console.log("STOPPED since errors made is: " + model.errorCount);
         model.errorCount = 0;
     }
 });
-
-
-
-
-
-//////////////
-//  Countdown timer - a Global variable
-var countdownTimer;
