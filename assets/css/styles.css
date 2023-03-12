@@ -98,13 +98,13 @@ body {
     background-color: var(--color-secondary);
     line-height: 2.5em;
 }
-.console__answer-a:hover,
-.console__answer-b:hover {
-    background-color: #cf2CF2;
-}
 .console__answer-a:active,
 .console__answer-b:active {
   background-color: #FFFCF2;
+}
+.console__answer-a:hover,
+.console__answer-b:hover {
+    background-color: #FFFCF2;
 }
 .console__x, .console__y, .console__plus {
     font-size: var(--font-size-primary);
