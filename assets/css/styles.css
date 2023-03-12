@@ -98,10 +98,6 @@ body {
     background-color: var(--color-secondary);
     line-height: 2.5em;
 }
-.console__answer-a:active,
-.console__answer-b:active {
-  background-color: #FFFCF2;
-}
 .console__answer-a:hover,
 .console__answer-b:hover {
     background-color: #FFFCF2;
@@ -219,4 +215,10 @@ input[name=levels]:checked + label {
         position: fixed;
         bottom: 0;
     }
+}
+
+
+.console__answer-a:active,
+.console__answer-b:active {
+  background-color: #FFFCF2;
 }
