@@ -100,7 +100,7 @@ body {
 }
 .console__answer-a:active,
 .console__answer-b:active {
-    background-color: #FFFCF2;
+    background-color: #cf2CF2;
 }
 .console__x, .console__y, .console__plus {
     font-size: var(--font-size-primary);
