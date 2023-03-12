@@ -1,5 +1,5 @@
-# mental-math
-A mental math app
+# Mental Math Pro
+A mental math program
 
 ## Description
 Have this app act as your school math teacher. 
