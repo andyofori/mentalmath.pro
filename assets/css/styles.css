@@ -100,7 +100,7 @@ body {
 }
 .console__answer-a:hover,
 .console__answer-b:hover {
-    background-color: #FFFCF2;
+  background-color: #FFFCF2;
 }
 .console__x, .console__y, .console__plus {
     font-size: var(--font-size-primary);
@@ -215,10 +215,4 @@ input[name=levels]:checked + label {
         position: fixed;
         bottom: 0;
     }
-}
-
-
-.console__answer-a:active,
-.console__answer-b:active {
-  background-color: #FFFCF2;
 }
