@@ -98,8 +98,8 @@ body {
     background-color: var(--color-secondary);
     line-height: 2.5em;
 }
-.console__answer:active,
-.console__answer:active {
+.console__answer:hover,
+.console__answer:hover {
   background-color: #FFFCF2;
 }
 .console__x, .console__y, .console__plus {
