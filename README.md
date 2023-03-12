@@ -4,5 +4,4 @@ A mental math app
 ## Description
 Have this app act as your school math teacher. 
 
-It is a mental math program that throws random addition equations 
-at you to solve, while its countdown timer keeps you on your toes.
+Mental Math Pro is a mental math program that helps improve your mental math skills. With random addition equations and a countdown timer, you'll be able to sharpen your skills in no time. Try Mental Math Pro today.
