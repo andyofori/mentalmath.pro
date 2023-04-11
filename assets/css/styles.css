@@ -51,6 +51,10 @@ body {
     
 } */
 
+.title {
+  visibility: hidden;
+}
+
 .timer {
     background-color: var(--color-primary);
     text-align: center;
