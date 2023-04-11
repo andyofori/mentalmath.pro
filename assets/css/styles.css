@@ -47,6 +47,13 @@ body {
     grid-template-rows: 1fr 1fr;
 }
 
+/*---- SEO ----*/
+.title {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
 .timer {
     background-color: var(--color-primary);
     text-align: center;
