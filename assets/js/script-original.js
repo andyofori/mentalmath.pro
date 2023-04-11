@@ -369,7 +369,7 @@ btn.addEventListener("click", () => {
                  * -2 not zero due to setInterval's 
                  * delay correction via recurssion
                  */
-                if (countdownTimer == -2) {
+                if (countdownTimer == -1) {
                     btn.click();
                     btn.click();
                 }
