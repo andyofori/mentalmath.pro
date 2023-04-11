@@ -49,8 +49,11 @@ body {
 
 /*---- SEO ----*/
 .title {
-  visibility: hidden;
+    visibility: hidden;
     display: inline;
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 
 .timer {
