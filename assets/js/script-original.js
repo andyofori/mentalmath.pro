@@ -250,11 +250,11 @@ let controller = {
 
         //Set difficulty level
         switch (selectedDifficulty) {
-            case "easy":    this.setTimerAndOperands(selectedDifficulty, 5);
+            case "easy":    this.setTimerAndOperands(selectedDifficulty, 3);
                             break;
-            case "normal":  this.setTimerAndOperands(selectedDifficulty, 10);
+            case "normal":  this.setTimerAndOperands(selectedDifficulty, 5);
                             break;
-            case "hard":    this.setTimerAndOperands(selectedDifficulty, 15);
+            case "hard":    this.setTimerAndOperands(selectedDifficulty, 10);
                             break;
             }
     },
