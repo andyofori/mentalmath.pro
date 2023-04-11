@@ -47,10 +47,7 @@ body {
     grid-template-rows: 1fr 1fr;
 }
 
-/* .section {
-    
-} */
-
+/*---- SEO ----*/
 .title {
   visibility: hidden;
 }
