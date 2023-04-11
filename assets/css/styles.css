@@ -50,6 +50,7 @@ body {
 /*---- SEO ----*/
 .title {
     position: fixed;
+    background-color: brown;
     bottom: 0;
     right: 0;
 }
