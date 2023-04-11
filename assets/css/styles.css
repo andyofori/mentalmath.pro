@@ -50,6 +50,7 @@ body {
 /*---- SEO ----*/
 .title {
   visibility: hidden;
+    display: inline;
 }
 
 .timer {
