@@ -48,12 +48,11 @@ body {
 }
 
 /*---- SEO ----*/
-/* .title {
+.title {
     position: fixed;
-    background-color: brown;
     bottom: 0;
     right: 0;
-} */
+}
 
 .timer {
     background-color: var(--color-primary);
