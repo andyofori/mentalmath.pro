@@ -254,7 +254,7 @@ let controller = {
                             break;
             case "normal":  this.setTimerAndOperands(selectedDifficulty, 5);
                             break;
-            case "hard":    this.setTimerAndOperands(selectedDifficulty, 10);
+            case "hard":    this.setTimerAndOperands(selectedDifficulty, 7);
                             break;
             }
     },
