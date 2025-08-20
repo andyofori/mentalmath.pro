@@ -2,7 +2,7 @@
 A mental math program
 
 ## Website
-https://mentalmath.pro/
+https://andyofori.github.io/mentalmath.pro/
 
 ## Description
 Have this program act as your school math teacher. 
